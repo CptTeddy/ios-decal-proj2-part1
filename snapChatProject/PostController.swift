@@ -14,13 +14,14 @@ class PostController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var selectedImage: UIImage?
     var selectedFeed: String?
     
-    @IBOutlet weak var feedToPost: UITableView!
+    @IBOutlet var feedToPost: UITableView!
     
     @IBOutlet weak var feedConfirm: UILabel!
     
-    @IBAction func post(_ sender: UIButton) {
+    @IBAction func post(_ sender: Any) {
         
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
