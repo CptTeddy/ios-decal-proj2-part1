@@ -9,6 +9,42 @@
 import Foundation
 import UIKit
 
-class PostController {
+class PostController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var selectedImage: UIImage?
+    var selectedFeed: String?
+    
+    @IBOutlet weak var feedToPost: UITableView!
+    
+    @IBOutlet weak var feedConfirm: UILabel!
+    
+    @IBAction func post(_ sender: UIButton) {
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        feedToPost.delegate = self
+        feedToPost.dataSource = self
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return threadNames.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = feedToPost.dequeueReusableCell(withIdentifier: "FeedPostCell", for: indexPath) as! FeedPostCell
+        cell.feedName.text = threadNames[indexPath.item]
+        selectedFeed = threadNames[indexPath.item]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        feedConfirm.text = threadNames[indexPath.item]
+    }
     
 }

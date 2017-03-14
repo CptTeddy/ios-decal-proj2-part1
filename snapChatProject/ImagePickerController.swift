@@ -10,7 +10,7 @@ import UIKit
 
 class ImagePickerController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var selectedImage
+    var selectedImage: UIImage?
     
     @IBOutlet var imageCollectionView: UICollectionView!
     override func viewDidLoad() {
