@@ -10,11 +10,13 @@ import UIKit
 
 class ImagePickerController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    var selectedImage
+    
     @IBOutlet var imageCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imageCollectionView.collectionViewLayout = ImageFlowLayout.init()
-        self.imageCollectionView.backgroundColor = UIColor.lightGray
+        self.imageCollectionView.backgroundColor = UIColor.white
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,9 +26,19 @@ class ImagePickerController: UIViewController, UICollectionViewDataSource, UICol
 
     func selectImage(_ image: UIImage) {
         //The image being selected is passed in as "image".
+        selectedImage = image
+        performSegue(withIdentifier: "pickToPost", sender: self)
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier == "pickToPost" {
+                if let dest = segue.destination as? PostController {
+                    dest.selectedImage = self.selectedImage
+                }
+            }
+        }
+    }
     
     //DON'T MODIFY CODE HERE AND BELOW!
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -108,11 +108,30 @@
                     <navigationItem key="navigationItem" title="Snapchat 2.0" id="1DI-gn-L1G"/>
                     <connections>
                         <outlet property="imageCollectionView" destination="wYC-QR-9eI" id="lwC-Kg-QfQ"/>
+                        <segue destination="fXD-W3-9O4" kind="show" identifier="pickToPost" id="hNR-lL-vWG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="370" y="-425"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Jl7-zb-E4H">
+            <objects>
+                <viewController id="fXD-W3-9O4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6wN-vF-FJN"/>
+                        <viewControllerLayoutGuide type="bottom" id="gAA-hJ-drq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AcP-lh-Cta" customClass="PostController">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rLw-JF-4wQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1247" y="-425"/>
         </scene>
     </scenes>
     <resources>
