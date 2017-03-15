@@ -19,7 +19,9 @@ class PostController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var feedConfirm: UILabel!
     
     @IBAction func post(_ sender: Any) {
-        
+        var added: [UIImage] = threads[selectedFeed!]!
+        added.append(selectedImage!)
+        threads[selectedFeed!] = added
     }
     
     

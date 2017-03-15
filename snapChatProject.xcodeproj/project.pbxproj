@@ -18,7 +18,10 @@
 		4196F2E31E6514EE009916E4 /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4196F2E21E6514EE009916E4 /* ImagePickerController.swift */; };
 		4196F2ED1E6609B0009916E4 /* PostNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4196F2EC1E6609B0009916E4 /* PostNavigationController.swift */; };
 		AD2C31CE1E787D88005C058A /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2C31CD1E787D88005C058A /* PostController.swift */; };
+		AD48E2581E78C5A60001F39B /* FeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD48E2571E78C5A60001F39B /* FeedViewCell.swift */; };
+		AD48E25A1E78CB100001F39B /* ViewImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD48E2591E78CB100001F39B /* ViewImageController.swift */; };
 		AD7CD2361E7883DC00F7AF45 /* FeedPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7CD2351E7883DC00F7AF45 /* FeedPostCell.swift */; };
+		AD7CD2381E78BE4B00F7AF45 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7CD2371E78BE4B00F7AF45 /* FeedController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +38,10 @@
 		4196F2E21E6514EE009916E4 /* ImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
 		4196F2EC1E6609B0009916E4 /* PostNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostNavigationController.swift; sourceTree = "<group>"; };
 		AD2C31CD1E787D88005C058A /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		AD48E2571E78C5A60001F39B /* FeedViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewCell.swift; sourceTree = "<group>"; };
+		AD48E2591E78CB100001F39B /* ViewImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewImageController.swift; sourceTree = "<group>"; };
 		AD7CD2351E7883DC00F7AF45 /* FeedPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPostCell.swift; sourceTree = "<group>"; };
+		AD7CD2371E78BE4B00F7AF45 /* FeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,7 @@
 			children = (
 				417986C81E664AE40050E1DF /* imageCollectionVieCell.swift */,
 				AD7CD2351E7883DC00F7AF45 /* FeedPostCell.swift */,
+				AD48E2571E78C5A60001F39B /* FeedViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -79,10 +86,12 @@
 			isa = PBXGroup;
 			children = (
 				417986C41E6632C40050E1DF /* TabBarController.swift */,
+				AD7CD2371E78BE4B00F7AF45 /* FeedController.swift */,
 				AD2C31CD1E787D88005C058A /* PostController.swift */,
 				4196F2EC1E6609B0009916E4 /* PostNavigationController.swift */,
 				417986CE1E6657650050E1DF /* Cells */,
 				4196F2E21E6514EE009916E4 /* ImagePickerController.swift */,
+				AD48E2591E78CB100001F39B /* ViewImageController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -191,11 +200,14 @@
 			files = (
 				417986CB1E664CB60050E1DF /* ImageFlowLayout.swift in Sources */,
 				AD2C31CE1E787D88005C058A /* PostController.swift in Sources */,
+				AD48E2581E78C5A60001F39B /* FeedViewCell.swift in Sources */,
 				4196F2E31E6514EE009916E4 /* ImagePickerController.swift in Sources */,
 				417986C51E6632C40050E1DF /* TabBarController.swift in Sources */,
 				417986C91E664AE40050E1DF /* imageCollectionVieCell.swift in Sources */,
+				AD48E25A1E78CB100001F39B /* ViewImageController.swift in Sources */,
 				4196F2DD1E650ECA009916E4 /* ImageFeed.swift in Sources */,
 				AD7CD2361E7883DC00F7AF45 /* FeedPostCell.swift in Sources */,
+				AD7CD2381E78BE4B00F7AF45 /* FeedController.swift in Sources */,
 				4196F2CB1E6509E8009916E4 /* AppDelegate.swift in Sources */,
 				4196F2ED1E6609B0009916E4 /* PostNavigationController.swift in Sources */,
 			);
