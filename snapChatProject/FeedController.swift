@@ -26,7 +26,7 @@ class FeedController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return threads.count
+        return threadNames.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -35,22 +35,23 @@ class FeedController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let name = threadNames[section]
-        return (threads[name]?.count)!
+        return (threads[name]!.count)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = allFeeds.dequeueReusableCell(withIdentifier: "FeedViewCell", for: indexPath) as! FeedViewCell
-        let name = threadNames[indexPath.item]
-        let snaps: [UIImage] = threads[name]!
-        let snap: UIImage = snaps[indexPath.item]
-//        cell.readOrNot.currentImage = #imageLiteral(resourceName: "read")
+//        let name = threadNames[indexPath.item]
+//        let snaps: [UIImage] = threads[name]!
+//        let snap: UIImage = snaps[indexPath.item]
+        cell.readOrNot.image = #imageLiteral(resourceName: "unread")
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let name = threadNames[indexPath.item]
-//        let snaps: [UIImage] = threads[name]!
-//        let snap: UIImage = snaps[indexPath.item]
+        let name = threadNames[indexPath.item]
+        let snaps: [UIImage] = threads[name]!
+        let snap: UIImage = snaps[indexPath.item]
+        toView = snap
         performSegue(withIdentifier: "feedToView", sender: self)
     }
     

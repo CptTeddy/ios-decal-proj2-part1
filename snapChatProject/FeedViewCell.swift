@@ -13,6 +13,5 @@ class FeedViewCell: UITableViewCell {
     
     @IBOutlet weak var posterName: UILabel!
     
-    @IBOutlet weak var readOrNot: UIButton!
-    
+    @IBOutlet weak var readOrNot: UIImageView!
 }

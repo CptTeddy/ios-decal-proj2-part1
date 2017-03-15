@@ -22,6 +22,7 @@ class PostController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var added: [UIImage] = threads[selectedFeed!]!
         added.append(selectedImage!)
         threads[selectedFeed!] = added
+        print(threads[selectedFeed!]?.count)
     }
     
     
@@ -42,12 +43,13 @@ class PostController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = feedToPost.dequeueReusableCell(withIdentifier: "FeedPostCell", for: indexPath) as! FeedPostCell
         cell.feedName.text = threadNames[indexPath.item]
-        selectedFeed = threadNames[indexPath.item]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         feedConfirm.text = threadNames[indexPath.item]
+        selectedFeed = threadNames[indexPath.item]
+        
     }
     
 }
